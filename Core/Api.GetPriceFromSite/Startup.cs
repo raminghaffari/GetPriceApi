@@ -1,3 +1,4 @@
+using Api.GetPriceFromSite.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -28,6 +29,17 @@ namespace Api.GetPriceFromSite
         {
 
             services.AddControllers();
+
+            services.AddApiVersioning(x =>
+            {
+                x.DefaultApiVersion = new ApiVersion(1, 0);
+                x.AssumeDefaultVersionWhenUnspecified = true;
+                x.ReportApiVersions = true;
+            });
+
+
+            services.AddScoped<IGetPriceService, GetPriceService>();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Api.GetPriceFromSite", Version = "v1" });
@@ -44,6 +56,7 @@ namespace Api.GetPriceFromSite
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Api.GetPriceFromSite v1"));
             }
 
+            app.UseApiVersioning();
             app.UseHttpsRedirection();
 
             app.UseRouting();
