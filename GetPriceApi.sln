@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32126.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{A0FCD598-93CF-4673-A148-9E93EF9FDDFB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{3EF8AB34-4609-4C84-B1BA-44C4DF75C96E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.GetPriceFromSite", "Core\Api.GetPriceFromSite\Api.GetPriceFromSite.csproj", "{61BD6A3F-8FFA-43DB-AA34-26B5C8B91B3D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{61BD6A3F-8FFA-43DB-AA34-26B5C8B91B3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61BD6A3F-8FFA-43DB-AA34-26B5C8B91B3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61BD6A3F-8FFA-43DB-AA34-26B5C8B91B3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61BD6A3F-8FFA-43DB-AA34-26B5C8B91B3D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{61BD6A3F-8FFA-43DB-AA34-26B5C8B91B3D} = {A0FCD598-93CF-4673-A148-9E93EF9FDDFB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2C610D28-E812-407B-B68D-5CEB879B8CA3}
+	EndGlobalSection
+EndGlobal
