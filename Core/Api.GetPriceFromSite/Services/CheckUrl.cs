@@ -42,7 +42,7 @@ namespace Api.GetPriceFromSite.Services
                 return new ResultDto
                 {
                     IsSuccess = false,
-                    Message = "Url Not Exist",
+                    Message = "Url Not Valid Or Exist",
                 };
             }
         }

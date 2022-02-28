@@ -1,4 +1,5 @@
-﻿using Api.GetPriceFromSite.Services;
+﻿using Api.GetPriceFromSite.Dtos;
+using Api.GetPriceFromSite.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
@@ -14,17 +15,17 @@ namespace Api.GetPriceFromSite.V1.Controllers
     [ApiController]
     public class GetPriceController : ControllerBase
     {
-        private readonly IGetPriceService getPriceService;
+        private readonly IGetPriceService _getPriceService;
 
         public GetPriceController(IGetPriceService getPriceService)
         {
-            this.getPriceService = getPriceService;
+            _getPriceService = getPriceService;
         }
 
         [HttpPost]
         public IActionResult GetPrice(string Url)
         {
-            var Result = getPriceService.GetAmazonPrice(Url);
+            var Result = _getPriceService.GetAmazonPrice(Url);
             if (!Result.IsSuccess)
             {
                 return NotFound(Result);
